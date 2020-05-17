@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 歌手：刀郎 -->
+    <bean id="daolang" class="com.zh.spring.model.Singer">
+        <property name="name" value="刀郎"/>
+    </bean>
+
+    <!-- 舞者：刘迦 -->
+    <bean id="liujia" class="com.zh.spring.model.Dancer">
+        <property name="name" value="刘迦"/>
+    </bean>
+
+    <!-- 舞台，手动指定装配 -->
+    <bean id="stage" class="com.zh.spring.model.Stage">
+        <property name="singer" ref="daolang"/>
+        <property name="dancer" ref="liujia"/>
+    </bean>
+
+    <!-- 舞台，自动根据类型装配 -->
+    <!--<bean id="stage" class="com.zh.springsampledel.Stage" autowire="byType">-->
+         <!--autowire="byType"，表示按成员的类型自动装配 -->
+    <!--</bean>-->
+
+    <!--<bean id="stage" class="com.zh.springsampledel.Stage" autowire="byName">-->
+         <!--autowire="byName"，表示按成员的名字自动装配 -->
+    <!--</bean>-->
+</beans>

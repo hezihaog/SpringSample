@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 定义一个司机类实例 -->
+    <bean id="driver1" class="com.zh.spring.model.Driver">
+        <property name="name" value="张三"/>
+    </bean>
+
+    <bean id="zhoujielun" class="com.zh.spring.model.Singer">
+        <property name="name" value="周杰伦"/>
+    </bean>
+
+    <bean id="linjunjie" class="com.zh.spring.model.Singer">
+        <property name="name" value="林俊杰"/>
+    </bean>
+</beans>
