@@ -19,6 +19,10 @@ public class CarAspect {
     public void outBeforeNote(JoinPoint point) {
         //在出门前执行
         System.out.println("\n<========= 出门登记 ========>");
+        //接入方法信息
+        System.out.println("point.getSignature() = " + point.getSignature());
+        //接入目标对象的类型信息
+        System.out.println("point.getTarget().getClass().getName() = " + point.getTarget().getClass().getName());
     }
 
     @After("execution(public void out())")
